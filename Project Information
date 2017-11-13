@@ -22,15 +22,16 @@ Tentative Pages:
 11/11 Blake:
 Put the following into the body of your sitemap for this project, edit it as you want to make styling consistent:
 
-<a href="project/home.php">Project</a>
-<ol>
-    <li><a href="project/home.php">Home page</a></li>
-    <li> Project Files 
-        <ul>
-            <li><a href="css/project.css">CSS for the project</a></li>
-        </ul>
-    </li>
-</ol>
+<li><a href="project/home.php">Project</a>
+    <ol>
+        <li><a href="project/home.php">Home page</a></li>
+            <li> Project Files 
+                 <ul>
+                     <li><a href="css/project.css">CSS for the project</a></li>
+                 </ul>
+            </li>
+    </ol> 
+</li>  
 
 With this you'll have to 
   -make a folder called project in your cs008 folder
