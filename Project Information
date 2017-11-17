@@ -38,4 +38,64 @@ With this you'll have to
   -make a css file called project.css and put it in the css folder
   -create a home.php file in project/
 I made base files on here for these that we can use to add our edits to.
-        
+
+
+11/17 Sarah:
+
+About.php
+
+Mission statement/origin story – why we made this blog
+everyone needs to write a bio (name, year, major, fun facts, etc.)
+
+Baking.php ideas
+
+Scrollable page of posts
+Chocolate chip cookies
+Brownies
+Cake in a mug
+
+Cooking.php ideas
+
+Ramen/mac and cheese/pasta/pad thai (something with noodles)
+Eggs and bacon
+Burrito bowl
+Homemade pizza
+Stir fry
+Grilled cheese
+Baked potato
+Chili
+
+
+Essentials.php ideas
+
+Ingredients:
+Starches (rice, pasta, potatoes, etc.) – these keep for a long time
+Salt, pepper, and seasonings – plants!
+Eggs
+Bread or rice cakes
+Apples
+Granola and yogurt/oatmeal
+Olive oil
+Vinegar
+Two kinds of protein (chicken, fish, pork, beef, etc.)
+Peanut butter
+Butter
+Some kind of cheese (shredded, Parmesan, cheddar, etc.)
+Celery
+Greens
+Tomato sauce
+
+Home.php
+Blocks of content: most recent post in each category with background images
+
+Subscribe.php
+
+Requirements:
+
+•	Include one text box for a user’s email address.
+•	Include two additional text boxes. – First Name, Last Name
+•	Include one list box. How did you find us?  
+•	Include three check boxes. Type of content you want to subscribe to (recipes, tips & tricks, nutrition & ingredients)
+•	Include three radio buttons. ?????
+•	Include a Submit button.
+•	Include field sets and legends as needed.
