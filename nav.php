@@ -11,14 +11,6 @@
         print '</li>';
         //****
         print '<li class="';
-        if ($path_parts['filename'] == "about") {
-            print ' activePage ';
-        }
-        print '">';
-        print '<a href="about.php">About</a>';
-        print '</li>';
-        //****
-        print '<li class="';
         if ($path_parts['filename'] == "baking") {
             print ' activePage ';
         }
@@ -39,7 +31,15 @@
             print ' activePage ';
         }
         print '">';
-        print '<a href="essentials.php">Essentials</a>';
+        print '<a href="essentials.php">Ingredients</a>';
+        print '</li>';
+         //****
+        print '<li class="';
+        if ($path_parts['filename'] == "about") {
+            print ' activePage ';
+        }
+        print '">';
+        print '<a href="about.php">About</a>';
         print '</li>';
         //****
         print '<li class="';
