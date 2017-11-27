@@ -8,7 +8,7 @@ $path_parts = pathinfo($phpSelf);
 <html lang="en">
     <head>
         <title>We Need A Name</title>
-        <meta name="author" content="Blake, Erin, & Sarah">
+        <meta name="author" content="Blake, Erin, and Sarah">
         <meta charset="utf-8">
         <meta name="description" content="Baking, cooking and nutrition hacks for college students/young adults on a budget">
         <link rel="stylesheet" href="../css/project.css" type="text/css" media="screen">
