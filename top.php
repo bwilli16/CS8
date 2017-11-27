@@ -1,4 +1,8 @@
 // 11/27: this is just so you can see the metadata I have. Feel free to edit.
+<?php
+$phpSelf = htmlentities($_SERVER['PHP_SELF'], ENT_QUOTES, "UTF-8");
+$path_parts = pathinfo($phpSelf);
+ ?>
 
 <!DOCTYPE HTML>
 <html lang="en">
