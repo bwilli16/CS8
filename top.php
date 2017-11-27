@@ -46,4 +46,14 @@ $path_parts = pathinfo($phpSelf);
         print PHP_EOL.'<!-- finished including libraries -->'.PHP_EOL;
         ?>
     </head>
+ <?php
+    print '<body id="' . $path_parts['filename'] . '">';
+    
+    include ('header.php'); 
+    include ('nav.php');
+        
+    if ($debug) {
+    print '<p>DEBUG MODE IS ON</p>';
+    }
+    ?>
 </html>
