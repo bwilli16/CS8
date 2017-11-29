@@ -36,3 +36,38 @@ nav a{
     text-transform:none;
 
 }
+
+
+/*Stuff for home page*/
+.Recipe{
+    float:left;
+    max-width:40%;
+    max-height:40%;
+    margin:5px;
+}
+
+img{
+  max-width:100%;
+  max-height:100%;
+}
+
+#content {
+    overflow: auto;
+}
+
+#nav, #across {
+    margin:1%;
+}
+
+.col1, .col2{
+    width: 47%;
+    float:left;
+    margin: 1%;
+}
+
+#across, .article{
+    height: 10em;
+    margin-bottom: 1em;
+    background-color:ivory;
+}
+/*End stuff for home page*/
