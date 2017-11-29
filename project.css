@@ -15,206 +15,24 @@ body {
     margin-right:60px;
 }
 
-.fiftyPercent{
-    width: 50%;
-    text-align: center;
-}
-
-.roundedCornersSmall{
-    border-radius: 0.4em;
-    
-}
-
 h1{
-    color: royalblue;
-}
-/* ================= Lab 2 ================= */
-
-#lab2 a:hover, #news a:hover  {
-    background-color: #AAAAAA
 }
 
-#lab2 .SeaIce h1 a,#news .SeaIce h1 a {
-    background-color: lavender
+nav{
+    border: solid maroon;
+    border-width: 2px 0px 2px 0px;
+    border-radius: 0px;
+
 }
-
-#lab2 .SeaIce h1 a:hover,#news .SeaIce h1 a:hover{
-    background-color: #AAAAAA
-}
-
-#lab2 h1,#news h1 {
-    text-transform: uppercase;
-    background-color: #FFFFFF
-}
-
-
-html #lab2, html #news { 
-  background: url("../images/ice-sheets.jpg") no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-.SeaIce, .danville{
-    background: whitesmoke;
-}
-
-/*================= Lab 3 =================*/
-#lab3, body#contest {
-}
-
-#lab3 li:nth-child(odd), #contest article li:nth-child(odd){
-    background-color: white;
-    color: #0B2161;
-    border: solid black;
-    border-width: 2px 2px 2px 2px;
-}
-
-#lab3 li:nth-child(even), #contest article li:nth-child(even){
-    background-color: royalblue;
-    color: #F2F2F2;
-    border: solid black;
-    border-width: 0px 2px 0px 2px;
-}
-
-#lab3 span, #contest article span{
-    display: inline-block;
-    width: 200px;
-}
-
-#lab3 span:nth-child(1),#contest article span:nth-child(1) {
-    display: inline-block;
-    width: 100px;
-}
-
-#lab3 span:nth-child(2), #contest article span:nth-child(2) {
-    display: inline-block;
-    width: 300px;
-}
-
-#lab3 span:nth-child(3), #contest article span:nth-child(3) {
-    display: inline-block;
-    width: 300px;
-}
-
-/*================= Lab 4 =================*/
-
-#lab4, #art {
-    background-color: whitesmoke;
-    
-}
-
-#lab4 img, #art img{
-    max-width: 100%;
-    
-}
-
-#lab4 .roundedCornersSmall, #art .roundedCornersSmall{
-    border-radius: 0.4em;
-}
-
-#lab4 figure.roundedCornersSmall, #art figure.roundedCornersSmall{
-    border-radius: 0.8em;
-}
-
-#lab4 figure, #art figure{
-    border: thick solid royalblue;
-    padding: 10px;
-    margin: 20px;
-}
-
-#lab4 .animated, #art .animated{
-	background-color: darkgray;
-}
-
-#lab4 .animated figcaption, #art .animated figcaption{
-    color:lightgray;
-}
-
-#lab4 .transparent, #art .transparent{
-	background-color: lightgray;
-}
-
-#lab4 .transparent figcaption, #art .transparent figcaption{
-    color: darkblue;
-}
-
-/*================= Lab 5 =================*/
-#lab5 table, #weather table{
-    border-collapse: collapse;
-    border: 2px solid brown;
-}
-
-#lab5 th, td, #weather th, td{
-    border: 2px dashed brown;
-    padding: .3em;
-}
-
-#lab5 tr:nth-child(odd), #weather tr:nth-child(odd){
-    background-color: darksalmon;
-}
-
-#lab5 tr:nth-child(even), #weather tr:nth-child(even){
-    background-color: cornsilk;
-}
-
-/*================= Lab 6 =================*/
-#index img{
-    max-width: 20%;
-}
-
-/*================= Lab 8 =================*/
 nav ol li {
     display: inline-block;
     padding: 10px;
-    margin: 10px;
-    border: 2px solid royalblue;
-    border-radius: 4px;
-    
+    margin: 0px 20px 0px 20px;
+    border-width: 1px; 
 }
-nav{
-    border: solid royalblue;
-    border-width: 0px 0px 5px 0px;
-    border-radius: 0px;
-}
+nav a{
+    color:black;
+    font-family:"Trebuchet MS", Helvetica, sans-serif;
+    text-transform:none;
 
-/*================= Lab 9 =================*/
-/*style errors in form*/
-.mistake{
-    color: #fff;
-    background-color:#811;
-    border: thin solid #000;
-}
-
-#errors ol li{
-    color: red;
-}
-
-#form h2{
-    color: royalblue;
-}
-#frmRegister .contact, #frmRegister .radio, #frmRegister .checkbox, #frmRegister .buttons {
-    border: thin solid royalblue;
-    border-width: 2px;
-    border-radius: 5px;
-}
-#frmRegister .button{
-    border: thin solid royalblue;
-    background-color: whitesmoke;
-    border-width: 6px;
-    border-radius: 5px;
-}
-
-.contact input{
-    float: right;
-    margin: 0em 4em 1em 0em;
-}
-
-.contact select{
-    float: right;
-    margin: 0em 4em 1em 0em;
-}
-
-#frmRegister .buttons {
-    border-width:0;
 }
