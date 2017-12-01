@@ -1,4 +1,3 @@
-6: form (subscribe)
 <?php
 $debug=true;
 include 'top.php';
@@ -8,7 +7,7 @@ include 'top.php';
 //
 //SECTION: 1a
 //print array to check if form is working
-//if ($debug){
+if ($debug){
     print '<p>Post Array:</p><pre>';
     print_r($_POST);
     print '</pre>';
@@ -19,10 +18,7 @@ include 'top.php';
 //SECTION: 1b Security
 //
 // define security variable to be used in sec 2A
-
 $thisURL = $domain . $phpSelf;
-
-
 //%%%%%%%%%%%%%%%%%%%%%%%
 //
 //SECTION: 1c form variables
@@ -30,22 +26,16 @@ $thisURL = $domain . $phpSelf;
 // initialize variables, one for each form element
 // in the order they appear on the form.
 //for contact info
-$name="";
-$phone="";
-$email = "bwilli16@uvm.edu";
-$address="";
-$city="";
-
+$firstname="";
+$lastname="";
 //list box
-$state="VT";
-
+$findus="Search engine";
 //radio button
-$gender="Female";
-
+$gender="Male";
 //check box
-$newsletter=true;
-$volunteer=false;
-$product=false;
+$cooking=true;
+$baking=false;
+$nutrition=false;
         
         
 //%%%%%%%%%%%%%%%%%%%%%%%
@@ -54,28 +44,24 @@ $product=false;
 //
 // Initialize error flags, one for each form element
 // we validate in the order they appear in sec 1c.
-$nameERROR=false;
-$phoneERROR=false;
-$addressERROR=false;
-$cityERROR=false;
-$stateERROR=false;
+$firstnameERROR=false;
+$lastnameERROR=false;
 $emailERROR = false;
+$findusERROR=false;
 $genderERROR=false;
 $subscribeERROR=false;
 $totalChecked=0;
-
 ////%%%%%%%%%%%%%%%%%%%%%%%
 //
 ////SECTION: 1e misc variables
 //
 //  create array to store any error msgs filled in 2d, displayed in 3c.
 $errorMsg = array();
-
 //array used to store form values to be written to a .csv
-$dataRecord=array();
+$dataRecord = array();
 //
 //have we mailed the info to the user?
-$mailed=false;
+$mailed = false;
 //
 //%%%%%%%%%%%%%%%%%%%%%%%
 //
@@ -99,48 +85,44 @@ if (isset($_POST["btnSubmit"])) {
 //SECTION: 2b Clean data
 // remove any potential JavaScript or html code from form input.
 // Best to follow same order as declared in sec 1c.
-$name=htmlentities($_POST["txtName"],ENT_QUOTES,"UTF-8");
-    $dataRecord[]=$name;
-
-$phone=htmlentities($_POST["txtPhone"],ENT_QUOTES,"UTF-8");
-    $dataRecord[]=$phone;
-
-$address=htmlentities($_POST["txtAddress"],ENT_QUOTES,"UTF-8");
-    $dataRecord[]=$address;
-$city=htmlentities($_POST["txtCity"],ENT_QUOTES,"UTF-8");
-    $dataRecord[]=$city;
+$firstname = htmlentities($_POST["txtFirstName"],ENT_QUOTES,"UTF-8");
+    $dataRecord[]=$firstname;
+    
+$lastname = htmlentities($_POST["txtLastName"],ENT_QUOTES,"UTF-8");
+    $dataRecord[]=$lastname;
     
 $email = filter_var($_POST["txtEmail"], FILTER_SANITIZE_EMAIL);
     $dataRecord[]=$email;
     
-$gender=htmlentities($_POST["radGender"],ENT_QUOTES,"UTF-8");
-    $dataRecord[]=$gender;
+$findus = htmlentities($_POST["lstFindUs"], ENT_QUOTES, "UTF-8");
+    $dataRecord[] = $findus; 
     
-$dataRecord[]=$state;  
+$gender = htmlentities($_POST["radGender"],ENT_QUOTES,"UTF-8");
+    $dataRecord[]=$gender;  
     
-    if (isset($_POST["chkNewsletter"])){
-            $newsletter=true;
+    if (isset($_POST["chkCooking"])){
+            $cooking=true;
             $totalChecked++;
         } else {
-            $newsletter=false;
+            $cooking=false;
         }
-        $dataRecord[]=$newsletter;
+        $dataRecord[]=$cooking;
         
-        if (isset($_POST["chkVolunteer"])) {
-            $volunteer=true;
+        if (isset($_POST["chkBaking"])) {
+            $baking=true;
             $totalChecked++;
         }else{
-            $volunteer=false;
+            $baking=false;
         }
-        $dataRecord[]=$volunteer;
+        $dataRecord[]=$baking;
         
-        if (isset($_POST["chkProduct"])) {
-            $product=true;
+        if (isset($_POST["chkNutrition"])) {
+            $nutrition=true;
             $totalChecked++;
         }else{
-            $product=false;
+            $nutrition=false;
         }
-        $dataRecord[]=$product;
+        $dataRecord[]=$nutrition;
     
     ////%%%%%%%%%%%%%%%%%%%%%%%
     //
@@ -151,48 +133,31 @@ $dataRecord[]=$state;
     // If blocks should also be in order that elts appear on form, so the error 
     // messages appear in correct order. errorMsg will be desplayed on form. see 
     // wec 3b. Error flag $emailERROR will be used in sec 3c.
-    if ($name==""){
-        $errorMsg[]="Please enter your full name";
-        $nameError=true;
-    } elseif(!verifyAlphaNum($name)){
-        $errorMsg[]="Your name appears to have extra character.";
-        $nameERROR=true;
-    }
-
-    if ($phone==""){
-        $errorMsg[]="Please enter your phone number";
-        $phoneError=true;
-    } elseif(!verifyAlphaNum($phone)){
-        $errorMsg[]="Please enter your number without extra symbols such as dashes.";
-        $phoneError=true;
-    }
-    if ($address==""){
-        $errorMsg[]="Please enter your address";
-        $addressError=true;
-    } elseif(!verifyAlphaNum($address)){
-        $errorMsg[]="Your address appears to have extra character.";
-        $addressError=true;
-    }
-    if ($city==""){
-        $errorMsg[]="Please enter your city";
-        $cityError=true;
-    } elseif(!verifyAlphaNum($city)){
-        $errorMsg[]="Your city appears to have extra character.";
-        $cityError=true;
+    if ($firstname=="") {
+        $errorMsg[]="Please enter your first name";
+        $firstnameERROR=true;
+    } elseif(!verifyAlphaNum($firstname)) {
+        $errorMsg[]="Your first name appears to have extra character(s).";
+        $firstnameERROR=true;
     }
     
-   
-if($gender !="Male" AND $gender !="Female" AND $gender !="Other"){
+    if ($lastname=="") {
+        $errorMsg[]="Please enter your last name";
+        $lastnameERROR=true;
+    } elseif(!verifyAlphaNum($lastname)) {
+        $errorMsg[]="Your last name appears to have extra character(s).";
+        $lastnameERROR=true;
+    }
+    
+    if($gender !="Male" AND $gender !="Female" AND $gender !="Other") {
             $errorMsg[]="Please choose a gender";
             $genderERROR=true;
         }
-        if ($totalChecked < 1){
+    if ($totalChecked < 1) {
             $errorMsg[]="Please choose at least one subscription";
             $subscribeERROR=true;
         }
     ///////// end addition
-    
-    
     
     if ($email == "") {
         $errorMsg[] = 'Please enter your email address';
@@ -202,17 +167,14 @@ if($gender !="Male" AND $gender !="Female" AND $gender !="Other"){
         $emailERROR = true;
     }
     
-
 ////%%%%%%%%%%%%%%%%%%%%%%%
 //
 //SECTION: 2d Process Form-Passed validation
-
 // Process for when form passes validation (errorMsg array is empty)
 //
     if (!$errorMsg) {
         if ($debug)
             print PHP_EOL.'<p>Form is valid</p>';
-
     
 ////%%%%%%%%%%%%%%%%%%%%%%%
 //
@@ -230,14 +192,11 @@ if($gender !="Male" AND $gender !="Female" AND $gender !="Other"){
     
     //open file for append
     $file=fopen($filename,'a');
-
 //write the form information
     fputcsv($file,$dataRecord);
     
 //close file
     fclose($file);
-
-
 //%%%%%%%%%%%%%%%%%%%%%%%
 //
 //SECTION: 2f Create message
@@ -274,7 +233,7 @@ if($gender !="Male" AND $gender !="Female" AND $gender !="Other"){
     $from = 'bwilli16@uvm.edu';
     
     //subject of email should be relevant to form
-    $subject = 'Changing the Earth: ';
+    $subject = 'Thank you for subscribing to (blog name here)!';
     
     $mailed=sendMail($to,$cc,$bcc,$from,$subject,$message);
     
@@ -303,7 +262,6 @@ if($gender !="Male" AND $gender !="Female" AND $gender !="Other"){
         print '<h2> Thank you for providing information.</h2>';
         
         print '<p> For your records a copy of this data has ';
-
         if (!$mailed){
             print "not ";
         }     
@@ -312,10 +270,8 @@ if($gender !="Male" AND $gender !="Female" AND $gender !="Other"){
         
         print $message;
     } else{
-
     print '<h2>Register Today</h2>';
     print '<p class="form-heading">Contribute to our research.</p>';
-
     //%%%%%%%%%%%%%%%%%%%%%%%
     //
     //SECTION: 3b error msgs
@@ -330,7 +286,6 @@ if($gender !="Male" AND $gender !="Female" AND $gender !="Other"){
         foreach($errorMsg as $err){
             print '<li>'.$err.'</li>'.PHP_EOL;
         }
-
         print '</ol>'.PHP_EOL;
         print '</div>'.PHP_EOL;
         }
@@ -344,7 +299,13 @@ if($gender !="Male" AND $gender !="Female" AND $gender !="Other"){
     //
     */
     ?>
-    
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Subscribe to our blog</title>
+    </head>
+    <body>
     <form action="<?php print $phpSelf; ?>"
           id="frmRegister"
           method="post">
@@ -352,34 +313,33 @@ if($gender !="Male" AND $gender !="Female" AND $gender !="Other"){
         <fieldset class="contact">
             <legend>Contact Information</legend>
             <p>
-                <label class="required text-field" for="txtName">Name</label>
+                <label class="required text-field" for="txtFirstName">First Name</label>
                 <input autofocus
-                       <?php if ($nameERROR) print 'class="mistake"';?>
-                       id="txtName"
+                       <?php if ($firstnameERRORnameERROR) print 'class="mistake"';?>
+                       id="txtFirstName"
                        maxlength="45"
-                       name="txtName"
+                       name="txtFirstName"
                        onfocus="this.select()"
-                       placeholder="Enter your full name"
+                       placeholder="Enter your first name"
                        tabindex="100"
                        type="text"
-                       value="<?php print $name; ?>"
+                       value="<?php print $firstname; ?>"
                 >
             </p>
-             <p>
-                <label class="required text-field" for="txtPhone">Phone number</label>
-                <input 
-                       <?php if ($phoneERROR) print 'class="mistake"';?>
-                       id="txtPhone"
-                       maxlength="20"
-                       name="txtPhone"
-                       onfocus="this.select()"
-                       placeholder="8020001234"
-                       tabindex="100"
-                       type="text"
-                       value="<?php print $phone; ?>"
-                >  
+            <p>
+                <label class="required text-field" for="txtLastName">Last Name</label>
+                    <input autofocus
+                           <?php if ($lastnameERROR) print 'class="mistake"'; ?>
+                           id="txtLastName"
+                           maxlength="45"
+                           name="txtLastName"
+                           onfocus="this.select()"
+                           placeholder="Enter your last name"
+                           tabindex="100"
+                           type="text"
+                           value="<?php print $lastname; ?>"
+                    >
             </p>
-            
             <p>
                 <label class="required text-field" for="txtEmail">Email</label>
                     <input
@@ -394,126 +354,31 @@ if($gender !="Male" AND $gender !="Female" AND $gender !="Other"){
                          value="<?php print $email; ?>"        
                     >
                 </p>
+            </fieldset> <!-- ends contact -->    
                 
-                <p>
-                <label class="required text-field" for="txtAddress">Address</label>
-                <input 
-                       <?php if ($addressERROR) print 'class="mistake"';?>
-                       id="txtAddress"
-                       maxlength="100"
-                       name="txtAddress"
-                       onfocus="this.select()"
-                       placeholder="1 Main St"
-                       tabindex="100"
-                       type="text"
-                       value="<?php print $address; ?>"
-                >
-                </p>
-                <p>
-                <label class="required text-field" for="txtCity">City</label>
-                <input 
-                       <?php if ($cityERROR) print 'class="mistake"';?>
-                       id="txtCity"
-                       maxlength="100"
-                       placeholder="Burlington"
-                       name="txtCity"
-                       onfocus="this.select()"
-                       tabindex="100"
-                       type="text"
-                       value="<?php print $city; ?>"
-                >  
-            </p>
-            <p>
-                <label class="required listbox">State</label>
-            <select>
-                <option value="AK">AK</option>
-                <option value="AL">AL</option>
-                <option value="AR">AR</option>
-                <option value="AZ">AZ</option>
-                <option value="CA">CA</option>
-                <option value="CO">CO</option>
-                <option value="CT">CT</option>
-                <option value="DE">DE</option>
-                <option value="FL">FL</option>
-                <option value="GA">GA</option>
-                <option value="HI">HI</option>
-                <option value="IA">IA</option>
-                <option value="ID">ID</option>
-                <option value="IL">IL</option>
-                <option value="IN">IN</option>
-                <option value="KS">KS</option>
-                <option value="KY">KY</option>
-                <option value="LA">LA</option>
-                <option value="MA">MA</option> 
-                <option value="MD">MD</option> 
-                <option value="ME">ME</option> 
-                <option value="MI">MI</option> 
-                <option value="MN">MN</option> 
-                <option value="MO">MO</option> 
-                <option value="MS">MS</option> 
-                <option value="MT">MT</option>
-                <option value="NC">NC</option>
-                <option value="ND">ND</option>
-                <option value="NE">NE</option>
-                <option value="NH">NH</option>
-                <option value="NJ">NJ</option>
-                <option value="NM">NM</option>
-                <option value="NV">NV</option>
-                <option value="NY">NY</option>
-                <option value="OH">OH</option>
-                <option value="OK">OK</option>
-                <option value="OR">OR</option>
-                <option value="PA">PA</option>
-                <option value="RI">RI</option>
-                <option value="SC">SC</option>
-                <option value="SD">SD</option>
-                <option value="TN">TN</option>
-                <option value="TX">TX</option>
-                <option value="UT">UT</option>
-                <option value="VA">VA</option>
-                <option value="VT" selected>VT</option>
-                <option value="WA">WA</option>
-                <option value="WV">WV</option>
-                <option value="WI">WI</option>
-                <option value="WY">WY</option>
-</select>
-                 
-            </p>
-            </fieldset> <!-- ends contact -->
-            <fieldset class="checkbox <?php if ($activityERROR) print ' mistake'; ?>">
-            <legend>Email Subscriptions:</legend>
-                <p>
-                    <label class="check-field">
-                        <input <?php if ($newsletter) print " checked "; ?>
-                            id="chkNewsletter"
-                            name="chkNewsletter"
-                            tabindex="420"
-                            type="checkbox"
-                            value="Newsletter"> Weekly newsletter</label>
-                </p>
-                
-                <p>
-                    <label class="check-field">
-                        <input <?php if ($volunteer) print " checked "; ?>
-                            id="chkVolunteer"
-                            name="chkVolunteer"
-                            tabindex="430"
-                            type="checkbox"
-                            value="Volunteer"> Volunteering opportunities update </label>
-                </p>
-                
-                <p>
-                    <label class="check-field">
-                        <input <?php if ($product) print " checked "; ?>
-                            id="chkProduct"
-                            name="chkProduct"
-                            tabindex="430"
-                            type="checkbox"
-                            value="Product"> Product information and discounts</label>
-                </p>
-        </fieldset>
-            
-<fieldset class="radio <?php if ($genderERROR) print ' mistake'; ?>">
+            <fieldset>
+            <label class="required listbox <?php if ($findusERROR) print ' mistake'; ?>">How did you find us?</label>
+            <select id="lstFindUs"
+                            name="lstFindUs"
+                        tabindex="520">
+                                <option <?php if($findus=="Search engine") print " selected"; ?>
+                                    value="Search engine">Google or other search engine</option>
+                                
+                                <option <?php if($findus=="Other website") print " selected"; ?>
+                                    value="Other website">Link from other website</option>
+                                <option <?php if($findus=="Ad") print " selected"; ?>
+                                    value="Ad">Advertisement</option>
+                                
+                                <option <?php if($findus=="Social media") print " selected"; ?>
+                                    value="Social media">Social media</option>
+                                <option <?php if($findus=="Friend/family") print " selected"; ?>
+                                    value="Friend/family">Friend or family member</option>
+                                
+                                <option <?php if($findus=="Publication") print " selected"; ?>
+                                    value="Publication">Online or print publication</option>
+            </select>
+            </fieldset>
+            <fieldset class="radio <?php if ($genderERROR) print ' mistake'; ?>">
             <legend>What is your gender?</legend>
             <p>
                 <label class="radio-field">
@@ -547,22 +412,50 @@ if($gender !="Male" AND $gender !="Female" AND $gender !="Other"){
                            <?php if ($gender == "Male") echo ' checked="checked" '; ?> >
                 Other</Label>
             </p>
-        </fieldset>
+            </fieldset>
             
+            <fieldset class="checkbox <?php if ($activityERROR) print ' mistake'; ?>">
+            <legend>Check all types of content you want to subscribe to:</legend>
+                <p>
+                    <label class="check-field">
+                        <input <?php if ($cooking) print " checked "; ?>
+                            id="chkCooking"
+                            name="chkCooking"
+                            tabindex="420"
+                            type="checkbox"
+                            value="Cooking">Cooking Recipes</label>
+                </p>
+                
+                <p>
+                    <label class="check-field">
+                        <input <?php if ($baking) print " checked "; ?>
+                            id="chkBaking"
+                            name="chkBaking"
+                            tabindex="430"
+                            type="checkbox"
+                            value="Baking">Baking Recipes</label>
+                </p>
+                
+                <p>
+                    <label class="check-field">
+                        <input <?php if ($nutrition) print " checked "; ?>
+                            id="chkNutrition"
+                            name="chkNutrition"
+                            tabindex="430"
+                            type="checkbox"
+                            value="Nutrition">Nutrition tips & tricks</label>
+                </p>
+        </fieldset>
+   
         <fieldset class="buttons">
             
             <input class="button" id="btnSubmit" name="btnSubmit" tabindex="900" type="submit" value="Register">
-        </fieldset>
-            
-            
+        </fieldset>       
     </form>
     
 <?php
     } //end body submit
-?>
-    
-</article>
-
+?>    
 <?php include 'footer.php'; ?>
 
 </body>
