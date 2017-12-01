@@ -38,7 +38,7 @@ nav a{
 }
 
 
-/*Stuff for home page*/
+/*For home page*/
 .Recipe{
     float:left;
     max-width:40%;
@@ -47,16 +47,15 @@ nav a{
 }
 
 img{
-  max-width:100%;
-  max-height:100%;
+    width:400;
+    height:300;
+    max-width:100%;
+    max-height:100%;
+    border-radius:10px;
 }
 
 #content {
     overflow: auto;
-}
-
-#nav, #across {
-    margin:1%;
 }
 
 .col1, .col2{
@@ -65,9 +64,35 @@ img{
     margin: 1%;
 }
 
-#across, .article{
-    height: 10em;
-    margin-bottom: 1em;
-    background-color:ivory;
+div {
+    height:450;
+    overflow: auto;
 }
-/*End stuff for home page*/
+.row{
+	width:1000;
+    overflow: auto;
+}
+
+.Recipe{
+    margin-right: 20;
+}
+
+#content div{
+    height:120;
+    overflow: auto;;
+}
+
+.HomeImg{
+    width:1200;
+    height:200%;
+}
+div#HomeImg{
+    width:1200;
+    height:300;
+}
+
+.title{
+    height:100;
+    text-indent:21em;
+}
+/*End for home page*/
