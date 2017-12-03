@@ -10,7 +10,7 @@ p {
 }
 
 body {
-    background-color: white;
+    background-color: #f4fef4;
     margin-left: 60px;
     margin-right:60px;
 }
@@ -24,27 +24,27 @@ ol {
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-	background-color: #C2C2C2;
+	background-color: none;
 }
 
 nav ol li {
     display: inline-block;
     padding: 0px;
-    margin: 0px 20px 0px 20px;
+    margin: 0px 65px 0px 65px;
     border-width: 1px; 
 	float: left;
 }
 
 nav li a {
 	display: block;
-	color: graytext;
+	color: black;
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
 }
 
 li a:hover {
-	background-color:white;
+	background-color:none;
 }
 
 nav a{
