@@ -86,7 +86,7 @@ div {
     overflow: auto;
 }
 .row{
-	width:1000;
+	width:1200;
     overflow: auto;
 }
 
@@ -99,8 +99,9 @@ div {
     overflow: auto;;
 }
 
+
 .HomeImg{
-    width:1200;
+    width:1100;
     height:200%;
 }
 div#HomeImg{
@@ -110,6 +111,13 @@ div#HomeImg{
 
 .title{
     height:100;
-    text-indent:21em;
+    text-indent:436px;
+}
+
+.left{
+    margin:10 80 10 60;
+}
+.right{
+    margin:10 0 10 20;
 }
 /*End for home page*/
