@@ -1,6 +1,7 @@
 <?php
 $debug = true;
 include 'top.php';
+
 //%%%%%
 //
 //SECTION: 1 initialize variables
@@ -35,8 +36,6 @@ if ($debug) {
     $cooking = true;
     $baking = false;
     $nutrition = false;
-
-
 //%%%%%%%%%%%%%%%%%%%%%%%
 //
 //SECTION: 1d form error flags
@@ -67,7 +66,6 @@ if ($debug) {
 //SECTION: 2 Process for when form is submitted
 //
     if (isset($_POST["btnSubmit"])) {
-
 //%%%%%%%%%%%%%%%%%%%%%%%
 //
 //SECTION: 2a Security
@@ -77,8 +75,6 @@ if ($debug) {
             $msg .= 'Security breach detected and reported.</p>';
             die($msg);
         }
-
-
 //%%%%%%%%%%%%%%%%%%%%%%%
 //
 //SECTION: 2b Clean data
@@ -86,19 +82,14 @@ if ($debug) {
 // Best to follow same order as declared in sec 1c.
         $firstname = htmlentities($_POST["txtFirstName"], ENT_QUOTES, "UTF-8");
         $dataRecord[] = $firstname;
-
         $lastname = htmlentities($_POST["txtLastName"], ENT_QUOTES, "UTF-8");
         $dataRecord[] = $lastname;
-
         $email = filter_var($_POST["txtEmail"], FILTER_SANITIZE_EMAIL);
         $dataRecord[] = $email;
-
         $findus = htmlentities($_POST["lstFindUs"], ENT_QUOTES, "UTF-8");
         $dataRecord[] = $findus;
-
         $gender = htmlentities($_POST["radGender"], ENT_QUOTES, "UTF-8");
         $dataRecord[] = $gender;
-
         if (isset($_POST["chkCooking"])) {
             $cooking = true;
             $totalChecked++;
@@ -106,7 +97,6 @@ if ($debug) {
             $cooking = false;
         }
         $dataRecord[] = $cooking;
-
         if (isset($_POST["chkBaking"])) {
             $baking = true;
             $totalChecked++;
@@ -114,7 +104,6 @@ if ($debug) {
             $baking = false;
         }
         $dataRecord[] = $baking;
-
         if (isset($_POST["chkNutrition"])) {
             $nutrition = true;
             $totalChecked++;
@@ -122,7 +111,6 @@ if ($debug) {
             $nutrition = false;
         }
         $dataRecord[] = $nutrition;
-
         ////%%%%%%%%%%%%%%%%%%%%%%%
         //
     //SECTION: 2c Validation
@@ -139,7 +127,6 @@ if ($debug) {
             $errorMsg[] = "Your first name appears to have extra character(s).";
             $firstnameERROR = true;
         }
-
         if ($lastname == "") {
             $errorMsg[] = "Please enter your last name";
             $lastnameERROR = true;
@@ -147,7 +134,6 @@ if ($debug) {
             $errorMsg[] = "Your last name appears to have extra character(s).";
             $lastnameERROR = true;
         }
-
         if ($gender != "Male" AND $gender != "Female" AND $gender != "Other") {
             $errorMsg[] = "Please choose a gender";
             $genderERROR = true;
@@ -157,7 +143,6 @@ if ($debug) {
             $subscribeERROR = true;
         }
         ///////// end addition
-
         if ($email == "") {
             $errorMsg[] = 'Please enter your email address';
             $emailERROR = true;
@@ -165,7 +150,6 @@ if ($debug) {
             $errorMsg[] = 'Your email address appears to be incorrect.';
             $emailERROR = true;
         }
-
 ////%%%%%%%%%%%%%%%%%%%%%%%
 //
 //SECTION: 2d Process Form-Passed validation
@@ -174,27 +158,21 @@ if ($debug) {
         if (!$errorMsg) {
             if ($debug)
                 print PHP_EOL . '<p>Form is valid</p>';
-
 ////%%%%%%%%%%%%%%%%%%%%%%%
 //
 //SECTION: 2e Save data- passed validation
 //
 //save data to .csv
             $myFolder = '../data/';
-
             $myFileName = 'registration';
-
             $fileExt = '.csv';
-
             $filename = $myFolder . $myFileName . $fileExt;
             if ($debug)
                 print PHP_EOL . '<p>filename is ' . $filename;
-
             //open file for append
             $file = fopen($filename, 'a');
 //write the form information
             fputcsv($file, $dataRecord);
-
 //close file
             fclose($file);
 //%%%%%%%%%%%%%%%%%%%%%%%
@@ -204,21 +182,16 @@ if ($debug) {
 // build a message to display on screen in sec 3a and to mail to person filling
 // out the form (sec 2g).
             $message = '<h3>Thank you for registering! We will be in contact with you shortly with more information.</h3>';
-
             foreach ($_POST as $htmlName => $value) {
-
                 $message .= '<p>';
                 //breaks up form names into words. ex: 
                 //txtFirstName becomes First Name
                 $camelCase = preg_split('/(?=[A-Z])/', substr($htmlName, 3));
-
-
                 foreach ($camelCase as $oneWord) {
                     $message .= $oneWord . ' ';
                 }
                 $message .= ' = ' . htmlentities($value, ENT_QUOTES, "UTF-8") . '</p>';
             }
-
 //%%%%%%%%%%%%%%%%%%%%%%%
 //
 //SECTION: 2g Mail to user
@@ -228,12 +201,9 @@ if ($debug) {
             $to = $email; //to the person who filled out the form
             $cc = '';
             $bcc = '';
-
             $from = 'bwilli16@uvm.edu';
-
             //subject of email should be relevant to form
             $subject = 'Thank you for subscribing to (blog name here)!';
-
             $mailed = sendMail($to, $cc, $bcc, $from, $subject, $message);
         }//end form is valid
     } //ends if form was submitted
@@ -256,14 +226,12 @@ if ($debug) {
         // in form.
         if (isset($_POST["btnSubmit"]) AND empty($errorMsg)) {
             print '<h2> Thank you for providing information.</h2>';
-
             print '<p> For your records a copy of this data has ';
             if (!$mailed) {
                 print "not ";
             }
             print 'been sent:</p>';
             print '<p>To: ' . $email . '</p>';
-
             print $message;
         } else {
             print '<h2>Register Today</h2>';
@@ -273,19 +241,16 @@ if ($debug) {
     //SECTION: 3b error msgs
             //
     //display any error msgs before we print form
-
             if ($errorMsg) {
                 print '<div id="errors">' . PHP_EOL;
                 print '<h2>Your form has the following mistakes that need to be fixed.</h2>' . PHP_EOL;
                 print '<ol>' . PHP_EOL;
-
                 foreach ($errorMsg as $err) {
                     print '<li>' . $err . '</li>' . PHP_EOL;
                 }
                 print '</ol>' . PHP_EOL;
                 print '</div>' . PHP_EOL;
             }
-
             ////%%%%%%%%%%%%%%%%%%%%%%%
             //
     //SECTION: 3c html form
@@ -405,7 +370,7 @@ if ($debug) {
                                            name="radGender"
                                            value="Other"
                                            tabindex="572"
-                                           <?php if ($gender == "Male") echo ' checked="checked" '; ?> >
+                                           <?php if ($gender == "Other") echo ' checked="checked" '; ?> >
                                     Other</Label>
                             </p>
                         </fieldset>
