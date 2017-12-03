@@ -10,7 +10,7 @@ p {
 }
 
 body {
-    background-color: #f4fef4;
+    background-color: white;
     margin-left: 60px;
     margin-right:60px;
 }
@@ -47,13 +47,83 @@ li a:hover {
 	background-color:none;
 }
 
+nav a:hover {
+	color: #b6c58a
+}
+
 nav a{
     color:black;
     font-family:"Trebuchet MS", Helvetica, sans-serif;
     text-transform:none;
 
 }
+/* ================= Form Section ================= */
+#form form{
+    font: bold 0.6em Arial,Helventica,sans-serif;
+    max-width: 38em;
+    margin: auto;
+}
+fieldset{
+    border:2px solid #b6c58a;
+    clear: both;
+    margin-top: 2em;
+    padding: 1em;
+}
 
+.form-heading {
+    font-style: italic;
+}
+.check-field{
+    margin: 0 0 1.25em 7.5em;
+}
+
+.radio-field{
+    margin: 0 0 1.25em 7.5em;
+}
+
+.text-field{
+    display: block;
+    float: left;
+    margin: 0 0.5em 0 1.2em;
+    padding-right: 0.5em;
+    padding-top: 0.75em;
+    text-align: center;
+    width: 7em;
+}
+
+#form input:focus,
+#form textarea:focus,
+#form select:focus{
+    border: 1px solid #0C0
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+}
+
+select {
+    width: 85%;
+    padding: 18px 20px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+}
+
+input[type=text] {
+    width: 85%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid gray;
+    border-radius: 4px;
+}
 
 /*For home page*/
 .Recipe{
