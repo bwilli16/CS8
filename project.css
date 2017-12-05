@@ -2,7 +2,7 @@
 
 /* ================= General ================= */
 * {
-    font-family: Arial, Helvetica, Verdana;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light","Helvetica Neue", Helvetica, Arial, Verdana;
 }
 
 p {
@@ -47,83 +47,13 @@ li a:hover {
 	background-color:none;
 }
 
-nav a:hover {
-	color: #b6c58a
-}
-
 nav a{
     color:black;
     font-family:"Trebuchet MS", Helvetica, sans-serif;
     text-transform:none;
 
 }
-/* ================= Form Section ================= */
-#form form{
-    font: bold 0.6em Arial,Helventica,sans-serif;
-    max-width: 38em;
-    margin: auto;
-}
-fieldset{
-    border:2px solid #b6c58a;
-    clear: both;
-    margin-top: 2em;
-    padding: 1em;
-}
 
-.form-heading {
-    font-style: italic;
-}
-.check-field{
-    margin: 0 0 1.25em 7.5em;
-}
-
-.radio-field{
-    margin: 0 0 1.25em 7.5em;
-}
-
-.text-field{
-    display: block;
-    float: left;
-    margin: 0 0.5em 0 1.2em;
-    padding-right: 0.5em;
-    padding-top: 0.75em;
-    text-align: center;
-    width: 7em;
-}
-
-#form input:focus,
-#form textarea:focus,
-#form select:focus{
-    border: 1px solid #0C0
-}
-
-input[type=submit] {
-    width: 100%;
-    background-color: #505c2e;
-    color: white;
-    padding: 10px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-}
-
-select {
-    width: 85%;
-    padding: 18px 20px;
-    margin: 5px 0;
-    border: none;
-    border-radius: 4px;
-    background-color: #f1f1f1;
-}
-
-input[type=text] {
-    width: 85%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 2px solid gray;
-    border-radius: 4px;
-}
 
 /*For home page*/
 .Recipe{
@@ -139,10 +69,8 @@ img{
     max-width:100%;
     max-height:100%;
     border-radius:10px;
-}
-
-#content {
-    overflow: auto;
+    margin: auto;
+        display: block;
 }
 
 .col1, .col2{
@@ -153,41 +81,153 @@ img{
 
 div {
     height:450;
-    overflow: auto;
-}
-.row{
-	width:1200;
-    overflow: auto;
+    overflow: none;
+    background-color: lightgray;
+    display: block;
+    margin: auto;
 }
 
+
 .Recipe{
-    margin-right: 20;
+    margin-right: 10;
+    
 }
 
 #content div{
     height:120;
     overflow: auto;
+
+    
 }
 
 
 .HomeImg{
-    width:1100;
+
     height:200%;
+    
 }
 div#HomeImg{
-    width:1200;
+    width:100%;
     height:300;
+    
 }
-
+#homeImg img{
+    width:1000px;
+}
+div#across{
+    margin:1em 2em 0 2em;
+}
 .title{
     height:100;
-    text-indent:-55px;
 }
 
 .left{
     margin:10 80 10 60;
+    
 }
 .right{
     margin:10 0 10 20;
 }
+
+div#content{
+    border-radius: 2em;
+    margin-bottom: 2em;
+}
+div.title.across{
+    border-radius: 2em 2em 0 0;
+}
+div#content{
+    padding-bottom: 2em;
+margin-bottom: 2em;
+    height: 520;
+}
+
+div#across{
+    padding-bottom: 2em;
+    padding-top: 2em;
+    height: 140;
+}
 /*End for home page*/
+
+
+#baking,#cooking {
+	margin: auto;
+}
+
+#baking figure img,#baking div ,#cooking figure img,#cooking div {
+	margin: auto;
+	display:block;
+}
+
+#baking p,#cooking p{
+	margin: auto;
+    padding: 2em;
+	display:block;
+	text-align:left;
+
+}
+#baking img,#cooking img{
+    border-radius: 0;
+	width: 80%;
+}
+
+#baking h2,#cooking h2{
+    font-family:serif;
+    text-align: center;
+    font-weight: normal;
+    color: black;
+    font-size:24pt;
+    position: relative;
+
+}
+#baking article h2:before,#baking h2:after,#cooking article h2:before,#cooking h2:after{
+    height:2px;
+    background: gray;
+    width:100%;
+    top:46%;
+    position: absolute;
+    content: "";
+    display: block;
+}
+#baking article h2:before,#cooking article h2:before{
+    right: 740px;
+    margin-right: -100px;
+}
+#baking article h2:after,#cooking article h2:after{
+    left: 740px;
+    margin-left: -100px;
+}
+
+#baking h3,#cooking h3{
+    font-family:serif;
+    font-style: italic;
+    text-align: center;
+    font-weight: normal;
+    color: black;
+    font-size:12pt;
+    position: relative;
+
+}
+#baking div,#cooking div{
+    width: 80%;
+    background-color: rgba(210, 208, 208, 0.55);
+	margin-bottom: 3em;
+    margin-top: 3em;
+    border-radius: 2em;
+}
+
+#baking #head,#cooking #head  {
+	background-color: white;
+    text-align: center;
+}
+#baking #head h4,#cooking #head h4  {
+    color:black;
+    font-family: serif; 
+	font-size: 40px;
+    margin: 0px;
+    text-align: center;
+}
+
+
+
+
