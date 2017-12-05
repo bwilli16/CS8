@@ -3,9 +3,9 @@ include ('top.php');
 ?>
 
 <div id="head">
-    <h4>Baking Recipes</h4>
+    <h4>Cooking Recipes</h4>
 </div>
-<article class="bake">
+<article class="baking cooking">
     <div>
         <h2>First recipe title</h2>
         <figure>
