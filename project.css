@@ -1,14 +1,24 @@
 /*This file is for the CSS of this project*/
 
 /* ================= General ================= */
-* {
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light","Helvetica Neue", Helvetica, Arial, Verdana;
+div {
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+	font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 20px;
+        text-indent: 2em;
 }
-
 p {
-    text-indent: 2em;
+	font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+	font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 20px;
+        text-indent: 2em;
 }
-
 body {
     background-color: white;
     margin-left: 60px;
@@ -18,8 +28,13 @@ body {
 h1{
 	text-align: center;
 }
+
+
+
+
+
 /* ================= Navigation ================= */
-ol {
+nav ol {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
@@ -30,7 +45,7 @@ ol {
 nav ol li {
     display: inline-block;
     padding: 0px;
-    margin: 0px 65px 0px 65px;
+    margin: 0px 30px 0px 30px;
     border-width: 1px; 
 	float: left;
 }
@@ -43,18 +58,100 @@ nav li a {
 	text-decoration: none;
 }
 
-li a:hover {
+nav li a:hover {
 	background-color:none;
 }
 
+nav a: hover {
+	color: #b6c58a;
+}
 nav a{
-    color:black;
-    font-family:"Trebuchet MS", Helvetica, sans-serif;
-    text-transform:none;
-
+     font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+	font-size: 20px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 20px;
+        text-indent: 2em;
 }
 
+/* ================= Form Section ================= */
+#form form{
+    font: bold 0.6em Arial,Helventica,sans-serif;
+    max-width: 38em;
+    margin: auto;
+}
+fieldset{
+    border:2px solid #b6c58a;
+    clear: both;
+    margin-top: 2em;
+    padding: 1em;
+}
 
+.form-heading {
+    font-style: italic;
+}
+.check-field{
+    margin: 0 0 1.25em 7.5em;
+}
+
+.radio-field{
+    margin: 0 0 1.25em 7.5em;
+}
+
+.text-field{
+    display: block;
+    float: left;
+    margin: 0 0.5em 0 1.2em;
+    padding-right: 0.5em;
+    padding-top: 0.75em;
+    text-align: center;
+    width: 7em;
+}
+
+#form input:focus,
+#form textarea:focus,
+#form select:focus{
+    border: 1px solid #0C0
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #505c2e;
+    color: white;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+}
+
+select {
+    width: 85%;
+    padding: 18px 20px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+}
+
+input[type=text] {
+    width: 85%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid gray;
+    border-radius: 4px;
+}
+/* form error section */
+.mistake {
+    color: #fff;
+    background-color: #800;
+    border: thin solid #000;
+}
+
+#errors ol li{
+    color: #ff5555;
+}
 /*For home page*/
 .Recipe{
     float:left;
