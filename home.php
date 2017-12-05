@@ -1,8 +1,12 @@
 <!--This .php file is the home page of the website -->
+
+This .php file is the home page of the website.
+
 <?php
 include ('top.php');
 ?>
 
+<!--Begin image boxes on page-->
 <div id="content">
     <div id="across">
         Donec lobortis felis in dolor efficitur sodales. Cras ante risus, ultricies 
@@ -23,17 +27,17 @@ include ('top.php');
     </div>
 </div>
 
-<div class="title">
+<div class="title across">
     <h1>Featured Posts</h1>
 </div>
 <div class="row">
-    <figure class="Recipe">
+    <figure class="Recipe left">
         <img alt="Description of first image" class="RecipeIntro" src="../images/aspen-trees.jpg">
         <figcaption> <b>Title of the FIRST Recipe </b><br>
                 The paragraph for the FIRST recipe will go here... <a href="project/recipes.php">See more recipes</a>
             </figcaption>
     </figure>
-    <figure class="Recipe">
+    <figure class="Recipe right">
         <img alt="Description of second image" class="RecipeIntro" src="../images/bristlecone-pine.jpg">
         <figcaption> <b>Title of the SECOND Recipe</b> <br>
                 The paragraph for the SECOND recipe will go here... <a href="project/recipes.php">See more recipes</a>
@@ -41,13 +45,13 @@ include ('top.php');
     </figure>
 </div>
 <div class="row">
-    <figure class="Recipe">
+    <figure class="Recipe left">
         <img alt="Description of first image" class="RecipeIntro" src="../images/ice-in.jpg">
         <figcaption> <b>Title of the THIRD Recipe </b><br>
                 The paragraph for the THIRD recipe will go here... <a href="project/recipes.php">See more recipes</a>
             </figcaption>
     </figure>
-    <figure class="Recipe">
+    <figure class="Recipe right">
         <img alt="Description of second image" class="RecipeIntro" src="../images/valley-view.jpg">
         <figcaption> <b>Title of the FOURTH Recipe</b> <br>
                 The paragraph for the FOURTH recipe will go here... <a href="project/recipes.php">See more recipes</a>
