@@ -369,3 +369,7 @@ div#col p{
     max-width:22%;
     margin:15px;
 }
+
+img.Ingredient{
+    height: 180px
+}
