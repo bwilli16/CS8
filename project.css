@@ -242,7 +242,7 @@ margin-bottom: 2em;
 div#across{
     padding-bottom: 2em;
     padding-top: 2em;
-    height: 140;
+    height: 160px;
 }
 /*End for home page*/
 
@@ -341,8 +341,31 @@ margin:0em 0em -2em 190em;
 
 }
 
+/*Begin about page*/
+div#about{
+    border-radius: 10px;
+}
+div#about p{
+    padding: 20px;
+}
+div#col{
+    float: left;
+    width: 30%;
+    margin: 10px 10px 10px 25px;
+    border-radius: 10px;
+}
 
+img#portrait{
+    margin-top: 1em;
+    border-radius: 0;
+}
 
+div#col p{
+    padding: 5px;
+}
 
-
-
+.ingredient{
+    float:left;
+    max-width:22%;
+    margin:15px;
+}
