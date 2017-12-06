@@ -181,7 +181,7 @@ if ($debug) {
 //
 // build a message to display on screen in sec 3a and to mail to person filling
 // out the form (sec 2g).
-            $message = '<h3>Thank you for registering! We will be in contact with you shortly with more information.</h3>';
+            $message = '<h3>Thank you for subscribing! Keep your eyes out for exciting recipes and cooking hacks.</h3>';
             foreach ($_POST as $htmlName => $value) {
                 $message .= '<p>';
                 //breaks up form names into words. ex: 
@@ -234,8 +234,8 @@ if ($debug) {
             print '<p>To: ' . $email . '</p>';
             print $message;
         } else {
-            print '<h2>Register Today</h2>';
-            print '<p class="form-heading">Contribute to our research.</p>';
+            print '<h2>Subscribe Today</h2>';
+            print '<p class="form-heading">Join our community as we cook, bake, and study our way to success.</p>';
             //%%%%%%%%%%%%%%%%%%%%%%%
             //
     //SECTION: 3b error msgs
