@@ -80,26 +80,42 @@ include ('top.php');
         <div id="space">
             <h5>.</h5>
         </div>
-        <h2>Third recipe title</h2>
+       <h2>Ramen in the microwave</h2>
         <figure>
-            <img alt="Pic of food" src="../images/valley-view.jpg">
+            <img alt="Pic of food" src="../Images/ramen.jpg">
         </figure>
+        <p><i>Here's a classic meal every college student needs to know how to make. This is a great one for when you're not feeling well or
+           need to eat and study at the same time. If you're at all like me when I got to college, you already know how to make ramen on the 
+           stove, but aren't sure how to in the microwave.</i></p>
         <p><b>Ingredients:</b></p>
         <ol>
-            <li>first </li>
-            <li>second </li>
-            <li>third </li>
-            <li>fourth ingredient </li>
+            <li>Package of ramen noodles (I used the Maruchan Chicken Flavor) </li>
+            <li>Two cups of water</li>
+            <li><i>Optional</i>: flavor packet that comes in the package</li>
+            <li><i>Optional</i>: leftover meat and veggies from your fridge</li>
         </ol>
         <p>
-            Lorem ipsum dolor sit amet, arcu nunc, aenean dolor sem, in mauris donec, pellentesque amet risus sed sem viverra volutpat, 
-            suspendisse eu adipiscing gravida. Mauris commodo semper odio aliquam, venenatis curabitur interdum nulla. Adipiscing cum enim, 
-            risus cum nunc dolor enim mattis odio, pede curabitur facilisis, egestas vel lectus lorem pellentesque cras sit, nec sodales accumsan
-            neque mauris nec. Fusce nunc, vel at, nam dignissim, nisl non donec volutpat. Dictum morbi laoreet eligendi eleifend. Vitae eget. 
-            Sed ac velit dui ante integer egestas, diam mi ultricies elit vehicula etiam luctus, felis adipiscing, wisi ac mi, id interdum. 
-            Malesuada vulputate et, libero eros adipiscing eu vestibulum mus tempus, euismod mollis tempus nec vel a, amet nec dictum vestibulum. 
-            Ipsum in mollis ultricies, ante condimentum eget eros nec pede, ligula nisl id cras diam, velit ut feugiat, condimentum montes lectus vulputate nibh.
+            Start by filling your microwave-safe bowl with about 2 cups of water. If you have a measuring cup, you can use that, but I usually
+            just eyeball the amount. You want enough water in your bowl to both saturate the noodles and serve as broth. Heat up the bowl of water
+            for 3 minutes in the microwave to get it good and hot. While the water is heating, use your hands to break up the still-closed package 
+            of noodles into smaller blocks so that it cooks faster.
         </p>
-        <h3>By Sarah Gaug. November 26, 2017</h3>
+        <p>
+            <i>Note: Because the microwave heats the water from all directions (as opposed to just the bottom), it won't boil like it would on the stove.
+            Don't worry, the water will still be plenty hot.</i>
+        </p>
+        <p>
+           Open the package of noodles and set aside the flavor packet for later. Add the noodles to the bowl and microwave for about two and a half minutes.
+           Open the microwave and stir the noodles, making sure all of them are saturated in the broth. If you have some leftover meat or veggies in your mini
+           fridge, now would be a good time to chop those up and add them to your soup. Microwave the soup for another two and a half minutes.
+        </p>
+        <p>
+            Carefully take the <strong>very hot</strong> bowl out of the microwave with some potholders, oven mitts, washcloths...whatever you've got. If you want
+            your soup to be flavored, open the flavor packet and stir in the powder. 
+        </p>
+        <p>
+            Now you have ramen! Grab some crackers to dip in the soup and get back to work (or watch your favorite show on Netflix or Hulu. The choice is yours).
+        </p>
+        <h3>By Sarah Gaug. November 28, 2017</h3>
     </div>
 </article>
