@@ -3,14 +3,24 @@ include ('top.php');
 ?>
 
 <div id="head">
-    <h4>Cooking Recipes</h4>
+    <h4>Baking Recipes</h4>
 </div>
-<article class="baking cooking">
+<article class="bake">
     <div>
+        <div id="space">
+            <h5>.</h5>
+        </div>
         <h2>First recipe title</h2>
         <figure>
             <img alt="Pic of food" src="../images/aspen-trees.jpg">
         </figure>
+        <p><b>Ingredients:</b></p>
+        <ol>
+            <li>first </li>
+            <li>second </li>
+            <li>third </li>
+            <li>fourth ingredient </li>
+        </ol>
         <p>
             Lorem ipsum dolor sit amet, arcu nunc, aenean dolor sem, in mauris donec, pellentesque amet risus sed sem viverra volutpat, 
             suspendisse eu adipiscing gravida. Mauris commodo semper odio aliquam, venenatis curabitur interdum nulla. Adipiscing cum enim, 
@@ -24,10 +34,20 @@ include ('top.php');
     </div>
     
     <div>
+        <div id="space">
+            <h5>.</h5>
+        </div>
         <h2>Second recipe title</h2>
         <figure>
             <img alt="Pic of food" src="../images/half-dome.jpg">
         </figure>
+        <p><b>Ingredients:</b></p>
+        <ol>
+            <li>first </li>
+            <li>second </li>
+            <li>third </li>
+            <li>fourth ingredient </li>
+        </ol>
         <p>
             Lorem ipsum dolor sit amet, arcu nunc, aenean dolor sem, in mauris donec, pellentesque amet risus sed sem viverra volutpat, 
             suspendisse eu adipiscing gravida. Mauris commodo semper odio aliquam, venenatis curabitur interdum nulla. Adipiscing cum enim, 
@@ -41,10 +61,20 @@ include ('top.php');
     </div>
     
     <div>
+        <div id="space">
+            <h5>.</h5>
+        </div>
         <h2>Third recipe title</h2>
         <figure>
             <img alt="Pic of food" src="../images/valley-view.jpg">
         </figure>
+        <p><b>Ingredients:</b></p>
+        <ol>
+            <li>first </li>
+            <li>second </li>
+            <li>third </li>
+            <li>fourth ingredient </li>
+        </ol>
         <p>
             Lorem ipsum dolor sit amet, arcu nunc, aenean dolor sem, in mauris donec, pellentesque amet risus sed sem viverra volutpat, 
             suspendisse eu adipiscing gravida. Mauris commodo semper odio aliquam, venenatis curabitur interdum nulla. Adipiscing cum enim, 
