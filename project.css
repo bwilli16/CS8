@@ -62,7 +62,7 @@ nav li a:hover {
 	background-color:none;
 }
 
-nav a: hover {
+nav a:hover {
 	color: #b6c58a;
 }
 nav a{
@@ -287,12 +287,14 @@ div#across{
     display: block;
 }
 #baking article h2:before,#cooking article h2:before{
-    right: 740px;
-    margin-right: -100px;
+    right: 50px;
+    width:290px;
+    margin-right: -10px;
 }
 #baking article h2:after,#cooking article h2:after{
-    left: 740px;
-    margin-left: -100px;
+	left: 50px;
+    width:290px;
+    margin-left: -10px;
 }
 
 #baking h3,#cooking h3{
@@ -332,6 +334,11 @@ div#across{
 #cooking p{
     padding:1em;
     margin: 0 1em 0 1em;
+}
+
+div#space{
+margin:0em 0em -2em 190em;
+
 }
 
 
