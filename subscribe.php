@@ -28,6 +28,7 @@ if ($debug) {
 //for contact info
     $firstname = "";
     $lastname = "";
+    $email="";
 //list box
     $findus = "Search engine";
 //radio button
