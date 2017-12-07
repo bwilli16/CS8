@@ -82,7 +82,7 @@ include ('top.php');
         </div>
        <h2>Ramen in the microwave</h2>
         <figure>
-            <img alt="Pic of food" src="../Images/ramen.jpg">
+            <img alt="Pic of food" src="../images/ramen.jpg">
         </figure>
         <p><i>Here's a classic meal every college student needs to know how to make. This is a great one for when you're not feeling well or
            need to eat and study at the same time. If you're at all like me when I got to college, you already know how to make ramen on the 
