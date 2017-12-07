@@ -3,7 +3,7 @@
 /* ================= General ================= */
 div {
     font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
-	font-size: 14px;
+	font-size: 16px;
 	font-style: normal;
 	font-variant: normal;
 	font-weight: 400;
@@ -215,15 +215,15 @@ div#across{
     margin:1em 2em 0 2em;
 }
 .title{
-    height:100;
+    height:100px;
 }
 
 .left{
-    margin:10 80 10 60;
+    margin:10px 80px 10px 60px;
     
 }
 .right{
-    margin:10 0 10 20;
+    margin:10px 0px 10px 20px;
 }
 
 div#content{
@@ -372,4 +372,47 @@ div#col p{
 
 img.Ingredient{
     height: 180px
+}
+
+div#space{
+    height:2em;
+}
+div.cooking{
+    height:4em;
+    border-radius: 2em 2em 0em 0em;
+}
+div.bottomrow{
+    border-radius: 0em 0em 2em 2em;
+}
+div.cooking.title h2{
+text-align: center;
+}
+
+
+
+header#header img{
+    height: 7em;
+    width: 22em;
+}
+div#content img{
+    width: 1100px;
+}
+div.row{
+    height:520px;
+    overflow: none;
+    background-color: lightgray;
+    display: block;
+    margin: auto;
+}
+div.row figure{
+    display: block;
+}
+div#essentials.row{
+    height: 320px;
+}
+div#essentials.row:nth-child(4n-1){
+    border-radius: 2em 2em 0em 0em;
+}
+div#essentials.row:nth-child(4n+2){
+    border-radius: 0em 0em 2em 2em;
 }
