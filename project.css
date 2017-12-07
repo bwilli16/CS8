@@ -408,11 +408,11 @@ div.row figure{
     display: block;
 }
 div#essentials.row{
-    height: 320px;
+    height: 570px;
 }
 div#essentials.row:nth-child(4n-1){
     border-radius: 2em 2em 0em 0em;
 }
-div#essentials.row:nth-child(4n+2){
+div#essentials.row:nth-child(3n+2){
     border-radius: 0em 0em 2em 2em;
 }
