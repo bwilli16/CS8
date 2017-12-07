@@ -1,7 +1,3 @@
-<!--This .php file is the home page of the website -->
-
-This .php file is the home page of the website.
-
 <?php
 include ('top.php');
 ?>
@@ -9,26 +5,26 @@ include ('top.php');
 <!--Begin image boxes on page-->
 <div id="content">
     <div id="across">
-        Donec lobortis felis in dolor efficitur sodales. Cras ante risus, ultricies 
-        in maximus a, porta molestie est. Suspendisse justo leo, scelerisque et pellentesque
-        ac, rutrum dapibus turpis. Fusce porttitor cursus leo eu elementum. Cras 
-        hendrerit sagittis nisl, in cursus nulla egestas eget. Class aptent taciti 
-        sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
-        Praesent auctor ipsum sed dolor volutpat maximus. Suspendisse tempor quis 
-        enim quis mollis. Curabitur pulvinar interdum urna ut vulputate. Donec ante
-        leo, ornare vel nisi quis, imperdiet volutpat justo. Nulla facilisi. Maecenas 
-        vel varius felis, a bibendum erat. Proin aliquam lectus metus, eget dictum 
-        lectus malesuada quis. Praesent mauris sem, sodales ut neque eget, aliquet
-        commodo ipsum. Vivamus sollicitudin, eros bibendum pulvinar pellentesque, 
-        ipsum neque venenatis est, id dictum lorem urna vel nisi. Nullam convallis sodales nisi.
+        
+        <b>Welcome</b> to your resource for easy cooking. Designed by college students for college students,
+        College Cooking is home to baking recipes, cooking recipes, and essential ingredients for your use.
+        Designed for both on campus and off campus living, you'll find a variety of recipes to suit your 
+        needs. From quick and easy microwave ramen to equally attractive, tasty, and nutritious baked maple salmon,
+        you will find an easy fix to your craving. When you want to expand your menu beyond our recipes,
+        take a look at our essential ingredients page. Here you'll find a number of versatile ingredients 
+        that will inspire your own dishes, and improve upon others. 
+        
     </div>
     <div id="HomeImg">
-        <img alt="Heading image for this page" class="HomeImg" src="../images/sand-dunes.jpg">
+        <img alt="Heading image for this page" class="HomeImg" src="../images/spread.jpeg">
     </div>
 </div>
 
-<div class="title across">
-    <h1>Featured Posts</h1>
+<div class="cooking title">
+    <div id="space">
+            <h5>.</h5>
+        </div>
+    <h2>Featured Posts</h2>
 </div>
 <div class="row">
     <figure class="Recipe left">
@@ -38,17 +34,20 @@ include ('top.php');
             </figcaption>
     </figure>
     <figure class="Recipe right">
-        <img alt="Description of second image" class="RecipeIntro" src="../images/bristlecone-pine.jpg">
-        <figcaption> <b>Title of the SECOND Recipe</b> <br>
-                The paragraph for the SECOND recipe will go here... <a href="project/recipes.php">See more recipes</a>
+        <img alt="Pic of salmon" class="RecipeIntro" src="../images/salmon.jpg">
+        <figcaption font-size='16'> <b>Maple Glazed Salmon</b> <br>
+                Put some of Vermont's liquid fruits of nature to good use with baked salmon.
+                Serve with rice and steamed kale for a healthy plate to serve at dinner, 
+                all while being a quick and easy meal to make... <a href="project/cooking.php">See more cooking recipes</a>
             </figcaption>
     </figure>
 </div>
-<div class="row">
+<div class="row bottomrow">
     <figure class="Recipe left">
-        <img alt="Description of first image" class="RecipeIntro" src="../images/ice-in.jpg">
-        <figcaption> <b>Title of the THIRD Recipe </b><br>
-                The paragraph for the THIRD recipe will go here... <a href="project/recipes.php">See more recipes</a>
+        <img alt="Description of first image" class="RecipeIntro" src="../images/ramenresize.jpg">
+        <figcaption> <b>Ramen in the microwave</b><br>
+                Here's a classic meal every college student needs to know how to make. This is a great one for when you're not feeling well or
+           need to eat and study at the same time.... <a href="project/cooking.php">See more cooking recipes</a>
             </figcaption>
     </figure>
     <figure class="Recipe right">
