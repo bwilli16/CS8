@@ -49,7 +49,7 @@ include ('top.php');
         </div>
         <h2>Homemade (or dorm-made) Brownies:</h2>
         <figure>
-            <img alt="Pic of food" src="../images/half-dome.jpg">
+            <img alt="Pic of food" src="../images/brownies.jpg">
         </figure>
         <p><b>Ingredients</b></p>
         <ol>
@@ -90,7 +90,7 @@ include ('top.php');
         </div>
         <h2>Chocolate Chip Cookies</h2>
         <figure>
-            <img alt="Pic of food" src="../images/half-dome.jpg">
+            <img alt="Pic of food" src="../images/cookies.jpg">
         </figure>
         <p><b>Ingredients:</b></p>
         <ol>
