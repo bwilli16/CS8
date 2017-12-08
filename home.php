@@ -7,7 +7,7 @@ include ('top.php');
     <div id="across">
         
         <b>Welcome</b> to your resource for easy cooking. Designed by college students for college students,
-        College Cooking is home to baking recipes, cooking recipes, and essential ingredients for your use.
+        Catamount Cooking is home to baking recipes, cooking recipes, and essential ingredients for your use.
         Designed for both on campus and off campus living, you'll find a variety of recipes to suit your 
         needs. From quick and easy microwave ramen to equally attractive, tasty, and nutritious baked maple salmon,
         you will find an easy fix to your craving. When you want to expand your menu beyond our recipes,
