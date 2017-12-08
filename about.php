@@ -17,11 +17,11 @@ include ('top.php');
             you are on the track. His favorite food is red curry, assuming that chocolate milk doesn't count.</p>
     </div>
     <div id='col'>
-        <img id='portrait' alt="Portrait" src="../images/ice-in.jpg">
-        <p>Lorem ipsum dolor sit amet, arcu nunc, aenean dolor sem, in mauris donec, pellentesque amet risus sed sem viverra volutpat, 
-            suspendisse eu adipiscing gravida. Mauris commodo semper odio aliquam, venenatis curabitur interdum nulla. Adipiscing cum enim, 
-            risus cum nunc dolor enim mattis odio, pede curabitur facilisis, egestas vel lectus lorem pellentesque cras sit, nec sodales accumsan
-            neque mauris nec.</p>
+        <img id='portrait' alt="Portrait" src="../images/erinbio.jpg">
+        <p><b>Erin</b>is a freshman at the University of Vermont, majoring in Art Education and minoring in Education for Cultural and
+                    Linguistic Diversity. She enjoys creating art, running really slowly, going on fun adventures with friends, and drinking
+                    an almost unhealthy amount of tea. If she is not studying, or at least pretending to, you can most likely find her exploring
+                    her new home of Burlington, Vermont.</p>
     </div>
     <div id='col'>
         <img id='portrait' alt="Portrait" src="../images/biosarah.jpg">
