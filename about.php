@@ -6,7 +6,7 @@ include ('top.php');
     <div id='about'>
         <p> <b>If you would like to stay updated,</b> head over to our subscription page. Here you can 
             subscribe to updates on cooking, baking, and nutrition tips & tricks, or any
-            combination of the above. Contact us via email if you wish to 
+            combination of the above. Contact us via email if you wish to. 
         </p>
     </div>
     <div id='col'>
