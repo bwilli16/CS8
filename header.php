@@ -1,4 +1,4 @@
 <!-- ######################     Start of header   ############################## -->
 <header id='header'>
-    <h1> College Cooking </h1>
+    <h1> Catamount Cooking </h1>
 </header>
