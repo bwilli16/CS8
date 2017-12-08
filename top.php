@@ -7,7 +7,7 @@ $path_parts = pathinfo($phpSelf);
 <!DOCTYPE HTML>
 <html lang="en">
     <head>
-        <title>We Need A Name</title>
+        <title>Catamount Cooking</title>
         <meta name="author" content="Blake, Erin, and Sarah">
         <meta charset="utf-8">
         <meta name="description" content="Baking, cooking and nutrition hacks for college students/young adults on a budget">
