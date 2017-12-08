@@ -7,7 +7,7 @@ include ('top.php');
     <div id="across">
         
         <b>Welcome</b> to your resource for easy cooking. Designed by college students for college students,
-        Catamount Cooking is home to baking recipes, cooking recipes, and essential ingredients for your use.
+        College Cooking is home to baking recipes, cooking recipes, and essential ingredients for your use.
         Designed for both on campus and off campus living, you'll find a variety of recipes to suit your 
         needs. From quick and easy microwave ramen to equally attractive, tasty, and nutritious baked maple salmon,
         you will find an easy fix to your craving. When you want to expand your menu beyond our recipes,
@@ -28,9 +28,9 @@ include ('top.php');
 </div>
 <div class="row">
     <figure class="Recipe left">
-        <img alt="Description of first image" class="RecipeIntro" src="../images/aspen-trees.jpg">
-        <figcaption> <b>Title of the FIRST Recipe </b><br>
-                The paragraph for the FIRST recipe will go here... <a href="project/recipes.php">See more recipes</a>
+        <img alt="Pic of chocolate chip cookies" class="RecipeIntro" src="../images/cookiesresize.jpg">
+        <figcaption> <b>Chocolate Chip Cookies </b><br>
+                The classic, better than ever... <a href="project/baking.php">See more baking recipes</a>
             </figcaption>
     </figure>
     <figure class="Recipe right">
@@ -45,15 +45,15 @@ include ('top.php');
 <div class="row bottomrow">
     <figure class="Recipe left">
         <img alt="Description of first image" class="RecipeIntro" src="../images/ramenresize.jpg">
-        <figcaption> <b>Ramen in the microwave</b><br>
+        <figcaption> <b>Ramen in the Microwave</b><br>
                 Here's a classic meal every college student needs to know how to make. This is a great one for when you're not feeling well or
            need to eat and study at the same time.... <a href="project/cooking.php">See more cooking recipes</a>
             </figcaption>
     </figure>
     <figure class="Recipe right">
-        <img alt="Description of second image" class="RecipeIntro" src="../images/valley-view.jpg">
-        <figcaption> <b>Title of the FOURTH Recipe</b> <br>
-                The paragraph for the FOURTH recipe will go here... <a href="project/recipes.php">See more recipes</a>
+        <img alt="Chcocolate chip muffin in a mug" class="RecipeIntro" src="../images/muffinresize.jpg">
+        <figcaption> <b>Choco Chip Muffin in a Mug</b> <br>
+                The perfect solution for when you want a muffin for dessert, but don't want to make a dozen, and only have a mug and a microwave.... <a href="project/baking.php">See more baking recipes</a>
             </figcaption>
     </figure>
 </div>
